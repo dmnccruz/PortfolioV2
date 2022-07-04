@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Meta from '../components/Meta';
+import LandingPage from '../components/LandingPage';
 import Page1 from '../components/Page1';
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
         }
         description={'Dominic Martin B. Cruz Portfolio'}
       />
+      <LandingPage />
       <Page1 />
     </div>
   );
