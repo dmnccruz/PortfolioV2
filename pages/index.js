@@ -1,22 +1,31 @@
-import { server } from '../config';
-import axios from 'axios';
+import { useEffect } from 'react';
+import AnimatedText from '../components/AnimatedText';
+import Meta from '../components/Meta';
 
-export default function Home({ sampleApi }) {
+const Home = () => {
+  useEffect(() => {
+    const text = document.querySelectorAll('#cruz svg path');
+
+    for (let i = 0; i < text.length; i++) {
+      console.log(`Letter ${i} is ${text[i].getTotalLength()}`);
+    }
+  }, []);
+
   return (
-    <>
-      <div className={''}>portfolio</div>
-    </>
+    <div>
+      <Meta
+        title={'Dominic Martin B. Cruz | Portfolio'}
+        keywords={
+          'Dominic, Martin, Baltazar, Cruz, Dominic Martin Baltazar Cruz Portfolio, Portfolio'
+        }
+        description={'Dominic Martin B. Cruz Portfolio'}
+      />
+      <AnimatedText name={'dominic'} />
+      <AnimatedText name={'martin'} />
+      <AnimatedText name={'baltazar'} />
+      <AnimatedText name={'cruz'} />
+    </div>
   );
-}
-
-// SAMPLE API
-export const getStaticProps = async () => {
-  // const res = await fetch(`${server}/api`); // custom api
-  // const res = await axios.get('https://jsonplaceholder.typicode.com/todos/1'); // sample api
-  // const sampleApi = await res.data;
-  const sampleApi = '';
-
-  return {
-    props: { sampleApi },
-  };
 };
+
+export default Home;

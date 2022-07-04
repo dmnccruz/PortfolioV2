@@ -1,7 +1,8 @@
+@import './animatedText.css';
+
 * {
   box-sizing: border-box;
-  color: 'red';
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html,
@@ -37,32 +38,8 @@ h4 {
   }
 }
 
-/* TABLET LANDSCAPE */
-@media only screen and (min-width: 845px) and (max-width: 1180px) and (orientation: landscape) {
-  h1 {
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-  h4 {
-    font-size: 0.775rem;
-    line-height: 0.775rem;
-  }
-}
-
 /* PHONE */
 @media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 1.15rem;
-    line-height: 1.15rem;
-  }
-  h4 {
-    font-size: 0.675rem;
-    line-height: 0.675rem;
-  }
-}
-
-/* PHONE LANDSCAPE */
-@media only screen and (max-width: 844px) and (orientation: landscape) {
   h1 {
     font-size: 1.15rem;
     line-height: 1.15rem;
