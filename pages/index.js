@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import AnimatedText from '../components/AnimatedText';
 import Meta from '../components/Meta';
+import Page1 from '../components/Page1';
 
 const Home = () => {
   useEffect(() => {
@@ -20,10 +20,7 @@ const Home = () => {
         }
         description={'Dominic Martin B. Cruz Portfolio'}
       />
-      <AnimatedText name={'dominic'} />
-      <AnimatedText name={'martin'} />
-      <AnimatedText name={'baltazar'} />
-      <AnimatedText name={'cruz'} />
+      <Page1 />
     </div>
   );
 };

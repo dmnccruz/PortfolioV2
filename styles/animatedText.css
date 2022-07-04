@@ -13,7 +13,16 @@
   }
 }
 
+/* NAMES ANIMATION */
+#dominic,
+#martin,
+#baltazar,
+#cruz {
+  display: flex;
+}
+
 /* DOMINIC ANIMATION */
+
 #dominic svg {
   /* animation: fillText 5s ease-in-out forwards 1s; */
 }
