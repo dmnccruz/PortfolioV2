@@ -7,6 +7,7 @@
   top: 0;
   height: 100%;
   width: 100%;
+  z-index: 2;
 }
 
 .textContainer {
@@ -17,14 +18,14 @@
   position: absolute;
 }
 
-@keyframes fillText {
+/* @keyframes fillText {
   from {
     fill: transparent;
   }
   to {
     fill: rgb(49, 49, 49);
   }
-}
+} */
 
 @keyframes nameAnim {
   to {
@@ -33,14 +34,26 @@
 }
 
 @keyframes letterAnim {
-  to {
+  30% {
+    stroke: white;
     stroke-dashoffset: 0;
+  }
+  99% {
+    stroke: white;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke: black;
   }
 }
 
 @keyframes letterAnimFill {
-  to {
+  99% {
     fill: white;
+  }
+  100% {
+    fill: black;
   }
 }
 
@@ -59,13 +72,13 @@
 /* DOMINIC ANIMATION */
 #d svg {
   fill: transparent;
-  animation: letterAnimFill 1s ease-in-out forwards 1.5s;
+  animation: letterAnimFill 1s ease-in-out forwards 1.9s;
 }
 
 #d svg path:nth-child(1) {
   stroke-dasharray: 173;
   stroke-dashoffset: 173;
-  animation: letterAnim 1s ease-in-out forwards;
+  animation: letterAnim 2.9s ease-in-out forwards;
 }
 
 #dominic svg path:nth-child(1) {
@@ -117,13 +130,13 @@
 /* MARTIN ANIMATION */
 #m svg {
   fill: transparent;
-  animation: letterAnimFill 1s ease-in-out forwards 1.5s;
+  animation: letterAnimFill 1s ease-in-out forwards 1.9s;
 }
 
 #m svg path:nth-child(1) {
   stroke-dasharray: 244;
   stroke-dashoffset: 244;
-  animation: letterAnim 1s ease-in-out forwards;
+  animation: letterAnim 2.9s ease-in-out forwards;
 }
 
 #martin svg path:nth-child(1) {
@@ -168,13 +181,13 @@
 /* BALTAZAR ANIMATION */
 #b svg {
   fill: transparent;
-  animation: letterAnimFill 1s ease-in-out forwards 1.5s;
+  animation: letterAnimFill 1s ease-in-out forwards 1.9s;
 }
 
 #b svg path:nth-child(1) {
   stroke-dasharray: 182;
   stroke-dashoffset: 182;
-  animation: letterAnim 1s ease-in-out forwards;
+  animation: letterAnim 2.9s ease-in-out forwards;
 }
 
 #baltazar svg path:nth-child(1) {
@@ -233,13 +246,13 @@
 /* CRUZ ANIMATION */
 #c svg {
   fill: transparent;
-  animation: letterAnimFill 1s ease-in-out forwards 1.5s;
+  animation: letterAnimFill 1s ease-in-out forwards 1.9s;
 }
 
 #c svg path:nth-child(1) {
   stroke-dasharray: 162;
   stroke-dashoffset: 162;
-  animation: letterAnim 1s ease-in-out forwards;
+  animation: letterAnim 2.9s ease-in-out forwards;
 }
 
 #cruz svg path:nth-child(1) {

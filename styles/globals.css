@@ -20,6 +20,8 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scrollbar-color: black transparent !important;
+  scrollbar-width: thin !important;
 }
 
 html,

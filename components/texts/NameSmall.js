@@ -1,6 +1,6 @@
-export const Dominic = () => {
+export const Dominic = ({ id }) => {
   return (
-    <div id={'dominic'}>
+    <div id={id}>
       <svg
         width='202'
         height='40'
@@ -48,9 +48,9 @@ export const Dominic = () => {
   );
 };
 
-export const Martin = () => {
+export const Martin = ({ id }) => {
   return (
-    <div id={'martin'}>
+    <div id={id}>
       <svg
         width='165'
         height='39'
@@ -93,9 +93,9 @@ export const Martin = () => {
   );
 };
 
-export const Baltazar = () => {
+export const Baltazar = ({ id }) => {
   return (
-    <div id={'baltazar'}>
+    <div id={id}>
       <svg
         width='206'
         height='37'
@@ -148,9 +148,9 @@ export const Baltazar = () => {
   );
 };
 
-export const Cruz = () => {
+export const Cruz = ({ id }) => {
   return (
-    <div id={'cruz'}>
+    <div id={id}>
       <svg
         width='104'
         height='29'
@@ -183,9 +183,9 @@ export const Cruz = () => {
   );
 };
 
-export const D = () => {
+export const D = ({ id }) => {
   return (
-    <div id={'d'}>
+    <div id={id}>
       <svg
         width='30'
         height='37'
@@ -203,9 +203,9 @@ export const D = () => {
   );
 };
 
-export const M = () => {
+export const M = ({ id }) => {
   return (
-    <div id={'m'}>
+    <div id={id}>
       <svg
         width='47'
         height='29'
@@ -223,9 +223,9 @@ export const M = () => {
   );
 };
 
-export const B = () => {
+export const B = ({ id }) => {
   return (
-    <div id={'b'}>
+    <div id={id}>
       <svg
         width='30'
         height='37'
@@ -243,9 +243,9 @@ export const B = () => {
   );
 };
 
-export const C = () => {
+export const C = ({ id }) => {
   return (
-    <div id={'c'}>
+    <div id={id}>
       <svg
         width='27'
         height='29'

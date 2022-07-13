@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import Meta from '../components/Meta';
 import LandingPage from '../components/LandingPage';
 import AnimatedName from '../components/AnimatedName';
+import Header from '../components/Header';
 import Page1 from '../components/Page1';
+import Page2 from '../components/Page2';
 
 const Home = () => {
   useEffect(() => {
@@ -24,7 +26,9 @@ const Home = () => {
       />
       <LandingPage />
       <AnimatedName />
+      <Header />
       <Page1 />
+      <Page2 />
     </>
   );
 };

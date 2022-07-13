@@ -6,21 +6,21 @@ const AnimatedName = () => {
     <div className={classes.container}>
       <div className={classes.textContainer}>
         <div className={classes.letterD}>
-          <AnimatedText name={'d'} />
+          <AnimatedText name={'d'} id={classes.d} />
         </div>
         <div className={classes.letterM}>
-          <AnimatedText name={'m'} />
+          <AnimatedText name={'m'} id={classes.m} />
         </div>
         <div className={classes.letterB}>
-          <AnimatedText name={'b'} />
+          <AnimatedText name={'b'} id={classes.b} />
         </div>
         <div className={classes.letterC}>
-          <AnimatedText name={'c'} />
+          <AnimatedText name={'c'} id={classes.c} />
         </div>
-        <AnimatedText name={'dominic'} />
-        <AnimatedText name={'martin'} />
-        <AnimatedText name={'baltazar'} />
-        <AnimatedText name={'cruz'} />
+        <AnimatedText name={'dominic'} id={classes.dominic} />
+        <AnimatedText name={'martin'} id={classes.martin} />
+        <AnimatedText name={'baltazar'} id={classes.baltazar} />
+        <AnimatedText name={'cruz'} id={classes.cruz} />
       </div>
     </div>
   );
