@@ -1,13 +1,14 @@
-import Dominic from './texts/Dominic';
-import Martin from './texts/Martin';
-import Baltazar from './texts/Baltazar';
-import Cruz from './texts/Cruz';
+import { Dominic, Martin, Baltazar, Cruz, D, M, B, C } from './texts/NameSmall';
 
 const texts = {
   dominic: <Dominic />,
   martin: <Martin />,
   baltazar: <Baltazar />,
   cruz: <Cruz />,
+  d: <D />,
+  m: <M />,
+  b: <B />,
+  c: <C />,
 };
 
 const AnimatedText = ({ name }) => {

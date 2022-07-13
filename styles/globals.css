@@ -1,4 +1,4 @@
-@import './animatedText.css';
+@import './animatedText.module.css';
 
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
@@ -27,8 +27,14 @@ body {
   padding: 0;
   margin: 0;
 }
+
 body {
   overflow: overlay;
+}
+
+#__next {
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {

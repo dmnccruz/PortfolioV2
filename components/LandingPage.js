@@ -1,17 +1,7 @@
-import AnimatedText from './AnimatedText';
-import classes from '../styles/ladingPage.module.css';
+import classes from '../styles/landingPage.module.css';
 
-const Page1 = () => {
-  return (
-    <div className={classes.container}>
-      <div className={classes.textContainer}>
-        <AnimatedText name={'dominic'} />
-        <AnimatedText name={'martin'} />
-        <AnimatedText name={'baltazar'} />
-        <AnimatedText name={'cruz'} />
-      </div>
-    </div>
-  );
+const LandingPage = () => {
+  return <div className={classes.container}></div>;
 };
 
-export default Page1;
+export default LandingPage;
