@@ -8,11 +8,17 @@ import Page2 from '../components/Page2';
 
 const Home = () => {
   useEffect(() => {
-    const text = document.querySelectorAll('#cruz svg path');
-
-    for (let i = 0; i < text.length; i++) {
-      console.log(`Letter ${i} is ${text[i].getTotalLength()}`);
-    }
+    // const body = document.getElementsByTagName('body');
+    // if (body) {
+    //   setTimeout(() => {
+    //     body[0].style.overflow =
+    //       navigator.userAgent.indexOf('Firefox') != -1 ? 'auto' : 'overlay';
+    //   }, 3000);
+    // }
+    // const text = document.querySelectorAll('#cruz svg path');
+    // for (let i = 0; i < text.length; i++) {
+    //   console.log(`Letter ${i} is ${text[i].getTotalLength()}`);
+    // }
   }, []);
 
   return (
