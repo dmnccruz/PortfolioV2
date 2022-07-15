@@ -1,13 +1,13 @@
 @import './animatedText.module.css';
 
-/* ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: 2px solid transparent;
-  background-color: black;
+  background: #1a1a1a;
   background-clip: content-box;
 }
 
@@ -15,19 +15,13 @@
   -webkit-appearance: none;
   width: 10px;
   height: 10px;
-  display: none;
-} */
-
-::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  /* scrollbar-color: black transparent !important; */
-  /* scrollbar-width: thin !important; */
-  scrollbar-width: none !important;
+  /* scrollbar-width: none !important; */
 }
 
 html,
@@ -39,7 +33,9 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow: overlay;
+  background: #9a9e9f;
+  /* overflow: hidden; */
 }
 
 #__next {

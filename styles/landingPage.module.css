@@ -1,20 +1,51 @@
 @keyframes landingPageContainer {
   to {
     height: 0%;
-    border-radius: 0 0 100% 100%;
   }
 }
 
 .container {
-  height: 100%;
+  height: calc(100% + 1px);
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: row;
-  background: black;
   transition: 0.15s ease-in-out;
   position: relative;
-  animation: landingPageContainer 0.5s ease forwards 2.5s;
+  animation: landingPageContainer 0.5s ease forwards 2.95s;
   border-radius: 0 0 0 0;
+  z-index: 10;
+}
+
+.container div:nth-child(1),
+.container div:nth-child(6) {
+  background: #1a1a1a;
+  height: 100%;
+  width: 10%;
+}
+
+.container div:nth-child(2),
+.container div:nth-child(3),
+.container div:nth-child(4),
+.container div:nth-child(5) {
+  background: #1a1a1a;
+  height: 100%;
+  width: 20%;
+}
+
+.container div:nth-child(1) {
+  animation: landingPageContainer 0.5s ease forwards 2.5s;
+}
+.container div:nth-child(2) {
+  animation: landingPageContainer 0.5s ease forwards 2.7s;
+}
+.container div:nth-child(3) {
+  animation: landingPageContainer 0.5s ease forwards 2.8s;
+}
+.container div:nth-child(4) {
+  animation: landingPageContainer 0.5s ease forwards 2.85s;
+}
+.container div:nth-child(5) {
+  animation: landingPageContainer 0.5s ease forwards 2.9s;
 }

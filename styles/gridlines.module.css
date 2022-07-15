@@ -1,0 +1,28 @@
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 3;
+}
+
+.container div:nth-child(1) {
+  border-right: 1px solid #828485;
+  height: 100%;
+  width: 10%;
+}
+
+.container div:nth-child(2),
+.container div:nth-child(3),
+.container div:nth-child(4),
+.container div:nth-child(5) {
+  border-right: 1px solid #828485;
+  height: 100%;
+  width: 20%;
+}
+
+.container div:hover {
+  border-right: 1px solid #707172;
+}

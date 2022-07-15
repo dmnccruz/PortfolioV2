@@ -1,9 +1,8 @@
-import classes from '../styles/landingPage.module.css';
+import classes from '../styles/gridlines.module.css';
 
-const LandingPage = () => {
+const Gridlines = () => {
   return (
     <div className={classes.container}>
-      <div></div>
       <div></div>
       <div></div>
       <div></div>
@@ -13,4 +12,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Gridlines;
