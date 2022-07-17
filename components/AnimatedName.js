@@ -6,10 +6,11 @@ const AnimatedName = () => {
   return (
     <div className={classes.container}>
       <div className={classes.textContainer}>
-        <StickyHoverComponent
+        {/* <StickyHoverComponent
           id={classes.hoverLetterContainer}
           divs={[classes.d, classes.m, classes.b, classes.c]}
-        />
+        /> */}
+        <div id={classes.hoverLetterContainer}></div>
         <div className={classes.letterD}>
           <AnimatedText name={'d'} id={classes.d} />
         </div>

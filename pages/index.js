@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import Meta from '../components/Meta';
 import LandingPage from '../components/LandingPage';
 import AnimatedName from '../components/AnimatedName';
-import Header from '../components/Header';
 import Gridlines from '../components/Gridlines';
 import Page1 from '../components/Page1';
 
@@ -29,7 +28,6 @@ const Home = () => {
       <Gridlines />
       <LandingPage />
       <AnimatedName />
-      <Header />
       <Page1 />
     </>
   );

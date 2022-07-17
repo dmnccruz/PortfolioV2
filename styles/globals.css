@@ -32,9 +32,17 @@ body {
   width: 100vw;
 }
 
+@keyframes bodyOverflow {
+  to {
+    overflow: auto;
+  }
+}
+
 body {
   /* overflow: overlay; */
+  overflow: hidden;
   background: #9a9e9f;
+  animation: bodyOverflow 0.5s ease 3.5s forwards;
 }
 
 #__next {

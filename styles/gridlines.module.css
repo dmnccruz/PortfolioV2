@@ -5,24 +5,31 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-direction: column;
   z-index: 3;
 }
 
-.container div:nth-child(1) {
-  border-right: 1px solid #828485;
+.gridLinesContainer {
+  height: calc(100% - 60px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 3;
+}
+
+.gridLine {
+  border-right: 1px dashed #828485;
   height: 100%;
+}
+
+.gridLine1 {
   width: 10%;
 }
 
-.container div:nth-child(2),
-.container div:nth-child(3),
-.container div:nth-child(4),
-.container div:nth-child(5) {
-  border-right: 1px solid #828485;
-  height: 100%;
+.gridLine2,
+.gridLine3,
+.gridLine4,
+.gridLine5 {
   width: 20%;
-}
-
-.container div:hover {
-  border-right: 1px solid #707172;
 }

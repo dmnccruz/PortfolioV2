@@ -276,7 +276,6 @@
 }
 
 /* LETTERS */
-
 @keyframes hoverLetterContainer {
   to {
     pointer-events: all;
@@ -285,10 +284,10 @@
 
 #hoverLetterContainer {
   position: fixed;
-  width: 87px;
-  height: 37px;
-  top: 25px;
-  left: 35px;
+  width: 130px;
+  height: 60px;
+  top: 0px;
+  left: 0px;
   cursor: pointer;
   z-index: 100;
   transform-origin: 50% 50%;
@@ -313,7 +312,7 @@
 
 @keyframes letterD {
   to {
-    top: 25px;
+    top: 11px;
     left: 35px;
     transform: scale(0.5);
   }
@@ -321,7 +320,7 @@
 
 @keyframes letterM {
   to {
-    top: 31px;
+    top: 17px;
     left: 48px;
     transform: scale(0.5);
   }
@@ -329,7 +328,7 @@
 
 @keyframes letterB {
   to {
-    top: 25px;
+    top: 11px;
     left: 78px;
     transform: scale(0.5);
   }
@@ -337,7 +336,7 @@
 
 @keyframes letterC {
   to {
-    top: 31px;
+    top: 17px;
     left: 95px;
     transform: scale(0.5);
   }
