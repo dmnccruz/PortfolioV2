@@ -15,13 +15,13 @@
   -webkit-appearance: none;
   width: 10px;
   height: 10px;
-  /* display: none; */
+  display: none;
 }
 
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  /* scrollbar-width: none !important; */
+  scrollbar-width: none !important;
 }
 
 html,
@@ -33,9 +33,8 @@ body {
 }
 
 body {
-  overflow: overlay;
+  /* overflow: overlay; */
   background: #9a9e9f;
-  /* overflow: hidden; */
 }
 
 #__next {
