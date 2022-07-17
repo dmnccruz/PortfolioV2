@@ -1,6 +1,5 @@
 import AnimatedText from './AnimatedText';
 import classes from '../styles/animatedText.module.css';
-import { useState } from 'react';
 import StickyHoverComponent from './StickyHoverComponent';
 
 const AnimatedName = () => {

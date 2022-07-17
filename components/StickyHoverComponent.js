@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 const StickyHoverComponent = ({ children, className, id, style, divs }) => {
   const [translate, setTranslate] = useState({ x: 0, y: 0 });

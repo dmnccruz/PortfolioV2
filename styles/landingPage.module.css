@@ -1,6 +1,7 @@
 @keyframes landingPageContainer {
   to {
     height: 0%;
+    top: -100px;
   }
 }
 
@@ -18,34 +19,45 @@
   z-index: 10;
 }
 
-.container div:nth-child(1),
-.container div:nth-child(6) {
+.bar {
   background: #1a1a1a;
   height: 100%;
+  position: relative;
   width: 10%;
 }
 
-.container div:nth-child(2),
-.container div:nth-child(3),
-.container div:nth-child(4),
-.container div:nth-child(5) {
-  background: #1a1a1a;
-  height: 100%;
+.bar1,
+.bar6 {
+  width: 10%;
+}
+
+.bar2,
+.bar3,
+.bar4,
+.bar5 {
   width: 20%;
 }
 
-.container div:nth-child(1) {
+.bar1 {
   animation: landingPageContainer 0.5s ease forwards 2.5s;
 }
-.container div:nth-child(2) {
+.bar2 {
   animation: landingPageContainer 0.5s ease forwards 2.7s;
 }
-.container div:nth-child(3) {
+.bar3 {
   animation: landingPageContainer 0.5s ease forwards 2.8s;
 }
-.container div:nth-child(4) {
+.bar4 {
   animation: landingPageContainer 0.5s ease forwards 2.85s;
 }
-.container div:nth-child(5) {
+.bar5 {
   animation: landingPageContainer 0.5s ease forwards 2.9s;
+}
+
+.gradientShadow {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  background-image: linear-gradient(#1a1a1a, #9a9e9f);
 }
