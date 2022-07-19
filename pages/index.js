@@ -3,6 +3,7 @@ import Meta from '../components/Meta';
 import LandingPage from '../components/LandingPage';
 import AnimatedName from '../components/AnimatedName';
 import Gridlines from '../components/Gridlines';
+import Header from '../components/Header';
 import Page1 from '../components/Page1';
 
 const Home = () => {
@@ -25,9 +26,10 @@ const Home = () => {
         }
         description={'Dominic Martin B. Cruz Portfolio'}
       />
-      <Gridlines />
+      <Header />
       <LandingPage />
       <AnimatedName />
+      <Gridlines />
       <Page1 />
     </>
   );

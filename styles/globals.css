@@ -41,7 +41,7 @@ body {
 body {
   /* overflow: overlay; */
   overflow: hidden;
-  background: #9a9e9f;
+  background: #1a1a1a;
   animation: bodyOverflow 0.5s ease 3.5s forwards;
 }
 
@@ -50,19 +50,39 @@ body {
   width: 100%;
 }
 
-h1 {
-  font-size: 3rem;
-  line-height: 3.75rem;
+.text-1 {
+  font-size: 108px;
+  line-height: 90px;
 }
 
-h3 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+.text-2 {
+  font-size: 72px;
+  line-height: 60px;
 }
 
-h4 {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+.text-3 {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.text-4 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.text-5 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.text-6 {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.text-7 {
+  font-size: 12px;
+  line-height: 12px;
 }
 
 /* TABLET */

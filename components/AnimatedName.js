@@ -1,15 +1,10 @@
 import AnimatedText from './AnimatedText';
 import classes from '../styles/animatedText.module.css';
-import StickyHoverComponent from './StickyHoverComponent';
 
 const AnimatedName = () => {
   return (
     <div className={classes.container}>
       <div className={classes.textContainer}>
-        {/* <StickyHoverComponent
-          id={classes.hoverLetterContainer}
-          divs={[classes.d, classes.m, classes.b, classes.c]}
-        /> */}
         <div id={classes.hoverLetterContainer}></div>
         <div className={classes.letterD}>
           <AnimatedText name={'d'} id={classes.d} />

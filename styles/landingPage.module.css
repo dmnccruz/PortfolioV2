@@ -1,22 +1,20 @@
 @keyframes landingPageContainer {
   to {
-    height: 0%;
-    /* top: -200px; */
+    height: 60px;
   }
 }
 
 .container {
+  z-index: 1002;
   height: calc(100% + 1px);
+  position: fixed;
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
   transition: 0.15s ease-in-out;
-  position: relative;
   animation: landingPageContainer 0.5s ease forwards 2.95s;
-  border-radius: 0 0 0 0;
-  z-index: 10;
 }
 
 .bar {
@@ -24,6 +22,7 @@
   height: 100%;
   position: relative;
   width: 10%;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .bar1,
@@ -52,12 +51,4 @@
 }
 .bar5 {
   animation: landingPageContainer 0.5s ease forwards 2.9s;
-}
-
-.gradientShadow {
-  height: 200px;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  background-image: linear-gradient(#1a1a1a, #9a9e9f);
 }
