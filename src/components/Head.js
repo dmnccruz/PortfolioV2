@@ -14,12 +14,12 @@ function Model(props) {
     group.current.rotation.y = THREE.MathUtils.lerp(
       group.current.rotation.y,
       pointer.x * (Math.PI / 5),
-      0.005
+      0.01
     );
     group.current.rotation.x = THREE.MathUtils.lerp(
       group.current.rotation.x,
       -pointer.y * (Math.PI / 5),
-      0.005
+      0.01
     );
   });
   return (
