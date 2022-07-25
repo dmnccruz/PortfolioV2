@@ -94,13 +94,13 @@ const Head = () => {
       className='Head'
       style={{
         background:
-          'radial-gradient(circle, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 35%)',
+          'radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 35%)',
       }}
     >
       <Canvas shadows camera={{ position: [0, 1.5, 14], fov: 75 }}>
         {/* <fog attach='fog' args={['black', 0, 20]} /> */}
         <pointLight position={[0, 10, -180]} intensity={10} />
-        <pointLight position={[0, 50, 180]} intensity={0.05} />
+        <pointLight position={[0, 50, 180]} intensity={0.01} />
         <Suspense
           fallback={
             // TODO: ADD LOADER
