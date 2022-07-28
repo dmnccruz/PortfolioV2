@@ -22,10 +22,21 @@ span {
   line-height: 30px;
 }
 
+.name span {
+  color: rgb(187, 159, 0);
+  font-size: 50px;
+  line-height: 30px;
+}
+
 span {
   font-size: 10px;
 }
 
 .subtext {
+  font-size: 20px;
+}
+
+.subtext span {
+  color: rgb(187, 159, 0);
   font-size: 20px;
 }

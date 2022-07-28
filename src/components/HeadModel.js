@@ -8,7 +8,7 @@ import '../styles/HeadModel.css';
 
 function Model(props) {
   const group = useRef();
-  const gltf = useLoader(GLTFLoader, './davidwithgoldbottom.gltf');
+  const gltf = useLoader(GLTFLoader, './davidwithgoldbottomandeyes.gltf');
 
   useFrame(({ pointer }) => {
     group.current.rotation.y = THREE.MathUtils.lerp(
