@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import '../styles/Page3.css';
 import Map from './Map';
-import sendgrid from '@sendgrid/mail';
-
-sendgrid.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
 
 const Page3 = () => {
   const [subject, setSubject] = useState('');
