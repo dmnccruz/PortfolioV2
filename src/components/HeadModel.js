@@ -16,11 +16,12 @@ function Model(props) {
       pointer.x * (Math.PI / 5),
       0.01
     );
-    group.current.rotation.x = THREE.MathUtils.lerp(
+    const x = THREE.MathUtils.lerp(
       group.current.rotation.x,
       -pointer.y * (Math.PI / 5),
       0.01
     );
+    group.current.rotation.x = x <= 0.43 ? x : 0.43;
   });
   return (
     <group ref={group} {...props}>
@@ -90,11 +91,13 @@ const HeadModel = () => {
   return (
     <div
       className='HeadModel'
-      style={{
-        // background:
-        //   'radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 35%)',
-        background: 'black',
-      }}
+      style={
+        {
+          // background:
+          // 'radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 35%)',
+          // background: 'black',
+        }
+      }
     >
       <Canvas shadows camera={{ position: [0, 1.5, 14], fov: 75 }}>
         <fog attach='fog' args={['black', 0, 20]} />
