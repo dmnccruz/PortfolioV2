@@ -15,6 +15,8 @@ const onLoad = (marker) => {
   //   console.log('marker: ', marker);
 };
 
+console.log(process.env);
+
 const Map = () => {
   return (
     <LoadScript
