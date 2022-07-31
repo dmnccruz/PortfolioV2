@@ -1,0 +1,159 @@
+.contactForm {
+  height: 100%;
+  width: 400px;
+  border-right: 1px solid rgb(100, 100, 100);
+  padding: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+@keyframes successBackground {
+  to {
+    opacity: 1;
+  }
+}
+
+.successBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(82, 209, 78, 0.7);
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  animation: 0.3s successBackground ease-out forwards;
+  opacity: 0;
+}
+
+.successBackground p {
+  margin-top: 20px;
+  font-size: 24px;
+  color: rgb(148, 248, 144);
+}
+
+.header {
+  color: rgb(187, 159, 0);
+  z-index: 1;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contactForm.disable {
+  pointer-events: none;
+}
+
+.contactForm input {
+  height: 32px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  background: black;
+  transition: 0.1s ease-in-out;
+}
+
+.contactForm input:focus {
+  background: rgb(15, 15, 15);
+}
+
+.contactForm textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  /* border-bottom: 1px solid rgb(100, 100, 100); */
+  padding: 15px;
+  color: white;
+  resize: none;
+  font-size: 20px;
+  background: black;
+  transition: 0.1s ease-in-out;
+}
+
+.contactForm textarea:focus {
+  background: rgb(15, 15, 15);
+}
+
+.contactForm input.error,
+.contactForm textarea.error {
+  color: rgb(255, 95, 95);
+}
+
+.contactForm input.error::placeholder,
+.contactForm textarea.error::placeholder {
+  color: rgb(255, 95, 95);
+}
+
+.contactForm .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  min-height: 40px;
+  width: 100%;
+  border: 1px solid rgb(100, 100, 100);
+  color: white;
+  font-size: 20px;
+  background: black;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.contactForm .button:hover {
+  background: rgb(15, 15, 15);
+}
+
+.contactForm .button:active {
+  background: rgb(141, 141, 141);
+}
+
+.contactForm .errorsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 56px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .errorsContainer p {
+  color: rgb(255, 95, 95) !important;
+  font-size: 14px;
+}
+
+.contactForm .socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  min-height: 24px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background: black;
+  transition: 0.1s ease-in-out;
+}
+
+.socialIcon {
+  cursor: pointer;
+}
