@@ -17,7 +17,13 @@ const onLoad = (marker) => {
 
 const Map = () => {
   return (
-    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLEMAPS_API_KEY}>
+    <LoadScript
+      googleMapsApiKey={
+        process.env.NODE_ENV === 'development'
+          ? process.env.REACT_APP_GOOGLEMAPS_API_KEY
+          : process.env.GOOGLEMAPS_API_KEY
+      }
+    >
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
