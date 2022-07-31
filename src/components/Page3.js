@@ -1,13 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/Page3.css';
 import Map from './Map';
 import axios from 'axios';
+import UseAnimations from 'react-useanimations';
 
 const Page3 = () => {
-  // const [subject, setSubject] = useState('');
-  // const [message, setMessage] = useState('');
-  const [sending, setSending] = useState(false);
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -38,52 +36,146 @@ const Page3 = () => {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-    // const validateEmail = (email) => {
-    //   const re =
-    //     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //   return re.test(email);
-    // };
-    // const errorsObj = {};
     e.preventDefault();
-    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-    axios({
-      method: 'POST',
-      url: `https://formspree.io/f/${process.env.REACT_APP_FORMSPREE_KEY}`,
-      data: inputs,
-    })
-      .then((response) => {
-        handleServerResponse(
-          true,
-          'Thank you, your message has been submitted.'
-        );
+    const validateEmail = (email) => {
+      const re =
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    };
+    const errorsObj = {};
+
+    if (!validateEmail(inputs.email)) {
+      errorsObj['email'] = 'email is invalid.';
+    }
+
+    Object.entries(inputs).map((el) => {
+      if (el[1] === '') {
+        errorsObj[el[0]] = `${el[0]} is required`;
+      }
+    });
+
+    setErrors(errorsObj);
+    if (Object.values(errorsObj).length === 0) {
+      setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+      axios({
+        method: 'POST',
+        url: `https://formspree.io/f/${process.env.REACT_APP_FORMSPREE_KEY}`,
+        data: inputs,
       })
-      .catch((error) => {
-        handleServerResponse(false, error.response.data.error);
-      });
+        .then((response) => {
+          handleServerResponse(
+            true,
+            'Thank you, your message has been submitted.'
+          );
+        })
+        .catch((error) => {
+          handleServerResponse(false, error.response.data.error);
+        });
+    }
   };
+
+  const handleChange = (input, value) => {
+    setErrors({});
+    setInputs({ ...inputs, [input]: value });
+  };
+
+  useEffect(() => {
+    if (status.submitted) {
+      setTimeout(() => {
+        setStatus({
+          info: { error: false, msg: null },
+          submitted: false,
+          submitting: false,
+        });
+      }, 5000);
+    }
+  }, [status.submitted]);
 
   return (
     <div className={'Page3'}>
       {/* <div className={'background'}></div> */}
       <div className={'contactContainer'}>
-        <div className={'contactForm'}>
+        <div className={`contactForm ${status.submitting ? 'disable' : ''}`}>
+          {status.submitted ? (
+            <div className={'successBackground'}>
+              <UseAnimations
+                animationKey='radioButton'
+                size={102}
+                autoplay={true}
+                strokeColor='rgb(82, 209, 78)'
+                fillColor='rgb(82, 209, 78)'
+              />
+              <p>Thank you for reaching out!</p>
+            </div>
+          ) : null}
           <h1 className={'header'}>Contact me</h1>
           <input
+            className={`${errors.email ? 'error' : ''}`}
             placeholder={'email'}
             value={inputs.email}
-            onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
+            onChange={(e) => handleChange('email', e.target.value)}
           />
           <textarea
+            className={`${errors.message ? 'error' : ''}`}
             placeholder={'message'}
             value={inputs.message}
-            onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
+            onChange={(e) => handleChange('message', e.target.value)}
           />
           <div className={'button'} onClick={(e) => handleSubmit(e)}>
-            send
+            {status.submitting ? (
+              <UseAnimations
+                animationKey='loading2'
+                size={20}
+                autoplay={true}
+                strokeColor='white'
+                fillColor='white'
+                style={{ marginTop: '4px' }}
+              />
+            ) : status.submitted ? (
+              ''
+            ) : (
+              'send'
+            )}
+          </div>
+          <div className={'errorsContainer'}>
+            {Object.values(errors).length > 0 &&
+              Object.values(errors).map((e) => {
+                return <p style={{ color: 'white' }}>{e}</p>;
+              })}
           </div>
           <div className={'socials'}>
-            <div className={'fab socialIcon'}>&#xf08c;</div>
+            <UseAnimations
+              onClick={() =>
+                window.open(
+                  'https://github.com/dmnccruz',
+                  '_blank',
+                  'noopener,noreferrer'
+                )
+              }
+              animationKey='github'
+              size={20}
+              autoplay={true}
+              loop={true}
+              strokeColor='white'
+              fillColor='white'
+              style={{ cursor: 'pointer', marginRight: '5px' }}
+            />
+            <UseAnimations
+              onClick={() =>
+                window.open(
+                  'https://www.linkedin.com/in/dominicmartincruz/',
+                  '_blank',
+                  'noopener,noreferrer'
+                )
+              }
+              animationKey='linkedin'
+              size={26}
+              autoplay={true}
+              loop={true}
+              strokeColor='white'
+              fillColor='white'
+              style={{ cursor: 'pointer' }}
+            />
           </div>
         </div>
         <Map />

@@ -37,6 +37,36 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  position: relative;
+}
+
+@keyframes successBackground {
+  to {
+    opacity: 1;
+  }
+}
+
+.successBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(82, 209, 78, 0.7);
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  animation: 0.3s successBackground ease-out forwards;
+  opacity: 0;
+}
+
+.successBackground p {
+  margin-top: 20px;
+  font-size: 24px;
+  color: rgb(148, 248, 144);
 }
 
 .header {
@@ -44,6 +74,10 @@
   z-index: 1;
   font-size: 24px;
   margin-bottom: 20px;
+}
+
+.contactForm.disable {
+  pointer-events: none;
 }
 
 .contactForm input {
@@ -81,6 +115,16 @@
   background: rgb(15, 15, 15);
 }
 
+.contactForm input.error,
+.contactForm textarea.error {
+  color: rgb(255, 95, 95);
+}
+
+.contactForm input.error::placeholder,
+.contactForm textarea.error::placeholder {
+  color: rgb(255, 95, 95);
+}
+
 .contactForm .button {
   display: flex;
   justify-content: center;
@@ -104,11 +148,27 @@
   background: rgb(141, 141, 141);
 }
 
+.contactForm .errorsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 56px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .errorsContainer p {
+  color: rgb(255, 95, 95) !important;
+  font-size: 14px;
+}
+
 .contactForm .socials {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
-  min-height: 72px;
+  align-items: center;
+  flex-direction: row;
+  min-height: 24px;
   width: 100%;
   color: white;
   font-size: 20px;
