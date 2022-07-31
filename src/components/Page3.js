@@ -2,6 +2,8 @@ import { useState } from 'react';
 import '../styles/Page3.css';
 import Map from './Map';
 
+console.log(process.env);
+
 const Page3 = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
