@@ -15,9 +15,6 @@ const onLoad = (marker) => {
   //   console.log('marker: ', marker);
 };
 
-console.log(123);
-console.log(process.env);
-
 const Map = () => {
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLEMAPS_API_KEY}>
