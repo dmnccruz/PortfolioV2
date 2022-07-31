@@ -40,6 +40,14 @@
   position: relative;
 }
 
+.closeButton {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
 @keyframes successBackground {
   to {
     opacity: 1;

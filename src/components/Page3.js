@@ -79,18 +79,6 @@ const Page3 = () => {
     setInputs({ ...inputs, [input]: value });
   };
 
-  useEffect(() => {
-    if (status.submitted) {
-      setTimeout(() => {
-        setStatus({
-          info: { error: false, msg: null },
-          submitted: false,
-          submitting: false,
-        });
-      }, 5000);
-    }
-  }, [status.submitted]);
-
   return (
     <div className={'Page3'}>
       {/* <div className={'background'}></div> */}
@@ -98,6 +86,25 @@ const Page3 = () => {
         <div className={`contactForm ${status.submitting ? 'disable' : ''}`}>
           {status.submitted ? (
             <div className={'successBackground'}>
+              <div
+                className={'closeButton'}
+                onClick={() => {
+                  setStatus({
+                    info: { error: false, msg: null },
+                    submitted: false,
+                    submitting: false,
+                  });
+                }}
+              >
+                <UseAnimations
+                  animationKey='plusToX'
+                  size={32}
+                  autoplay={true}
+                  strokeColor='rgb(82, 209, 78)'
+                  fillColor='rgb(82, 209, 78)'
+                  style={{ transform: 'rotate(45deg)' }}
+                />
+              </div>
               <UseAnimations
                 animationKey='radioButton'
                 size={102}
