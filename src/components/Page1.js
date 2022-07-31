@@ -6,7 +6,7 @@ const Page1 = () => {
     <div className={'Page1'}>
       <div className={'text'}>
         <h1 className={'name'}>
-          D O M I N I C M A R T I N <span>C R U Z</span>
+          D O M I N I C M A R T I N B. <span>C R U Z</span>
         </h1>
         <span>
           __________________________________________________________________________
