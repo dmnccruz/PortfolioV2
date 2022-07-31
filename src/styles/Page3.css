@@ -1,0 +1,15 @@
+.Page3 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  position: absolute;
+  bottom: 0px;
+  height: 75%;
+  width: 100%;
+  /* background-image: url('/src/assets/images/marbleblackgold.jpg');
+  background-position: top;
+  background-size: cover; */
+}
