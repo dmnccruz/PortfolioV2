@@ -15,6 +15,7 @@ const onLoad = (marker) => {
   //   console.log('marker: ', marker);
 };
 
+console.log(123);
 console.log(process.env);
 
 const Map = () => {
