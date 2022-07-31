@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
@@ -11,16 +11,9 @@ const center = {
   lng: 121.11524,
 };
 
-const position = {
-  lat: 14.58675,
-  lng: 121.11524,
-};
-
 const onLoad = (marker) => {
-  console.log('marker: ', marker);
+  //   console.log('marker: ', marker);
 };
-
-console.log(process.env.REACT_APP_GOOGLEMAPS_API_KEY);
 
 const Map = () => {
   return (
@@ -29,26 +22,29 @@ const Map = () => {
         mapContainerStyle={containerStyle}
         center={center}
         zoom={12}
+        disableDefaultUI={false}
+        mapTypeId={'terrain'}
         options={{
           styles: styleArr,
+          disableDefaultUI: true,
+          mapTypeId: 'terrain',
         }}
         style={styleArr}
       >
-        {/* Child components, such as markers, info windows, etc. */}
-        <></>
         <Marker
           onLoad={onLoad}
-          position={position}
-          //   icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
-          //   icon={{
-          //     path: 'M8 12l-4.7023 2.4721.898-5.236L.3916 5.5279l5.2574-.764L8 0l2.3511 4.764 5.2574.7639-3.8043 3.7082.898 5.236z',
-          //     fillColor: 'yellow',
-          //     fillOpacity: 0.9,
-          //     scale: 2,
-          //     strokeColor: 'gold',
-          //     strokeWeight: 2,
-          //   }}
+          position={center}
           //   animation={'drop'}
+          //   icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
+          icon={
+            {
+              // fillColor: 'red',
+              // fillOpacity: 0.9,
+              // scale: 2,
+              // strokeColor: 'red',
+              // strokeWeight: 2,
+            }
+          }
         />
       </GoogleMap>
     </LoadScript>
@@ -168,7 +164,7 @@ const styleArr = [
         color: '#000000',
       },
       {
-        lightness: 20,
+        // lightness: 20,
       },
     ],
   },
