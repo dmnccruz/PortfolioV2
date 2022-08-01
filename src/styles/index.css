@@ -13,6 +13,27 @@ html {
   background: black;
 }
 
+body::-webkit-scrollbar-track {
+  border-radius: 0 4px 4px 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  box-shadow: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: rgb(185, 185, 185);
+  background-clip: content-box;
+  transition: color 0.15s ease;
+  border: 1px solid black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 7.5px;
+  height: 10px;
+}
+
 #root {
   height: 100%;
   width: 100%;

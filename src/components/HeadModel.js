@@ -5,6 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Suspense, useRef } from 'react';
 import { Html } from '@react-three/drei';
 import '../styles/HeadModel.css';
+import UseAnimations from 'react-useanimations';
 
 function Model(props) {
   const group = useRef();
@@ -104,9 +105,15 @@ const HeadModel = () => {
         <pointLight position={[0, 50, 180]} intensity={1} />
         <Suspense
           fallback={
-            // TODO: ADD LOADER
             <Html center className='loader'>
-              LOADING
+              <UseAnimations
+                animationKey='loading2'
+                size={102}
+                autoplay={true}
+                strokeColor='rgb(50, 50, 50)'
+                fillColor='rgb(50, 50, 50)'
+                style={{ marginBottom: '200px' }}
+              />
             </Html>
           }
         >

@@ -111,7 +111,7 @@ const ContactForm = () => {
           <p>Thank you for reaching out!</p>
         </div>
       ) : null}
-      <h1 className={'header'}>Contact me</h1>
+      <h1 className={'header'}>Say hello</h1>
       <input
         className={`${errors.email ? 'error' : ''}`}
         placeholder={'email'}
