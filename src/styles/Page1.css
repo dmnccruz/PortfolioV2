@@ -11,6 +11,8 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+  z-index: 4;
+  pointer-events: none;
 }
 
 .name,
@@ -40,3 +42,42 @@ span {
   color: rgb(187, 159, 0);
   font-size: 20px;
 }
+
+/* .lineContainer1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 12.5%;
+  top: 12.5%;
+  height: 75%;
+  width: 75%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.lineContainer1 div {
+  border-left: 1px solid rgb(187, 159, 0);
+  height: 100%;
+  transform: rotate(45deg);
+}
+
+.lineContainer2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 12.5%;
+  top: 12.5%;
+  height: 75%;
+  width: 75%;
+  z-index: 10;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lineContainer2 div {
+  border-left: 1px solid white;
+  height: 100%;
+  transform: rotate(135deg);
+} */

@@ -5,12 +5,17 @@
   font-weight: 400;
 }
 
+#root {
+  background: black;
+}
+
 body,
 html {
   margin: 0;
   height: 100%;
   width: 100%;
   background: black;
+  scrollbar-width: none;
 }
 
 body::-webkit-scrollbar-track {

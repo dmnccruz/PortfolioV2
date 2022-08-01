@@ -2,9 +2,9 @@ import ContactForm from './ContactForm';
 import Map from './Map';
 import '../styles/Page3.css';
 
-const Page3 = () => {
+const Page3 = ({ id }) => {
   return (
-    <div className={'Page3'}>
+    <div className={'Page3'} id={id}>
       <div className={'contactContainer'}>
         {/* <div className={'background'}></div> */}
         <ContactForm />
