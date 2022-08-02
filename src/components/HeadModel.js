@@ -93,9 +93,8 @@ const HeadModel = () => {
     <div
       className='HeadModel'
       style={{
-        // background:
-        // 'radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 35%)',
-        // background: 'black',
+        background:
+          'radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 35%)',
         zIndex: 10,
       }}
     >
@@ -110,7 +109,7 @@ const HeadModel = () => {
           fallback={
             <Html center className='loader'>
               <UseAnimations
-                animationKey='loading2'
+                animationKey='infinity'
                 size={102}
                 autoplay={true}
                 strokeColor='rgb(50, 50, 50)'

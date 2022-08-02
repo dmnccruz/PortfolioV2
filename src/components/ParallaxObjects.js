@@ -14,25 +14,40 @@ const ParallaxObject = ({ translate, speed, children, style }) => {
   );
 };
 
-const ParallaxObjects = ({ translate }) => {
+const ParallexImages = ({ translate }) => {
   return (
-    <div
-      style={{
-        position: 'fixed',
-        height: '100%',
-        width: '100%',
-      }}
-    >
+    <>
       <ParallaxObject
         translate={translate}
-        speed={-0.1}
+        speed={-0.9}
         style={{
-          top: '150px',
+          top: -150,
+          right: 0,
         }}
       >
         <div
           style={{
-            backgroundImage: `url(${require('../assets/images/2.png')})`,
+            backgroundImage: `url(${require('../assets/images/5c.png')})`,
+            backgroundPosition: 'right',
+            backgroundSize: 'auto',
+            backgroundRepeat: 'no-repeat',
+            position: 'absolute',
+            height: '500px',
+            width: '100%',
+            opacity: 0.1,
+          }}
+        ></div>
+      </ParallaxObject>
+      <ParallaxObject
+        translate={translate}
+        speed={-0.7}
+        style={{
+          top: '50px',
+        }}
+      >
+        <div
+          style={{
+            backgroundImage: `url(${require('../assets/images/2c.png')})`,
             backgroundPosition: 'left',
             backgroundSize: 'auto',
             backgroundRepeat: 'no-repeat',
@@ -43,34 +58,34 @@ const ParallaxObjects = ({ translate }) => {
       </ParallaxObject>
       <ParallaxObject
         translate={translate}
-        speed={-0.2}
+        speed={-0.4}
         style={{
-          top: '250px',
+          top: '300px',
           right: 0,
         }}
       >
         <div
           style={{
-            backgroundImage: `url(${require('../assets/images/1.png')})`,
+            backgroundImage: `url(${require('../assets/images/1c.png')})`,
             backgroundPosition: 'right',
             backgroundSize: 'auto',
             backgroundRepeat: 'no-repeat',
             height: '500px',
             width: '100%',
+            opacity: 0.1,
           }}
         ></div>
       </ParallaxObject>
       <ParallaxObject
         translate={translate}
-        speed={-0.05}
+        speed={-0.3}
         style={{
-          bottom: 150,
-          height: '500px',
+          top: '600px',
         }}
       >
         <div
           style={{
-            backgroundImage: `url(${require('../assets/images/4.png')})`,
+            backgroundImage: `url(${require('../assets/images/4c.png')})`,
             backgroundPosition: 'left',
             backgroundSize: 'auto',
             backgroundRepeat: 'no-repeat',
@@ -82,23 +97,98 @@ const ParallaxObjects = ({ translate }) => {
       </ParallaxObject>
       <ParallaxObject
         translate={translate}
-        speed={-0.1}
+        speed={-0.6}
         style={{
-          top: '150px',
+          top: '900px',
           right: 0,
         }}
       >
         <div
           style={{
-            backgroundImage: `url(${require('../assets/images/3.png')})`,
+            backgroundImage: `url(${require('../assets/images/3c.png')})`,
             backgroundPosition: 'right',
             backgroundSize: 'auto',
             backgroundRepeat: 'no-repeat',
-            height: '1500px',
+            height: '500px',
+            width: '100%',
+            opacity: 0.1,
+          }}
+        ></div>
+      </ParallaxObject>
+      <ParallaxObject
+        translate={translate}
+        speed={-0.7}
+        style={{
+          top: '1400px',
+        }}
+      >
+        <div
+          style={{
+            backgroundImage: `url(${require('../assets/images/2c.png')})`,
+            backgroundPosition: 'left',
+            backgroundSize: 'auto',
+            backgroundRepeat: 'no-repeat',
+            height: '500px',
             width: '100%',
           }}
         ></div>
       </ParallaxObject>
+      <ParallaxObject
+        translate={translate}
+        speed={-0.5}
+        style={{
+          top: '1700px',
+          right: 0,
+        }}
+      >
+        <div
+          style={{
+            backgroundImage: `url(${require('../assets/images/1c.png')})`,
+            backgroundPosition: 'right',
+            backgroundSize: 'auto',
+            backgroundRepeat: 'no-repeat',
+            height: '500px',
+            width: '100%',
+            opacity: 0.1,
+          }}
+        ></div>
+      </ParallaxObject>
+      <ParallaxObject
+        translate={translate}
+        speed={-0.9}
+        style={{
+          top: '2000px',
+          right: 0,
+        }}
+      >
+        <div
+          style={{
+            backgroundImage: `url(${require('../assets/images/5c.png')})`,
+            backgroundPosition: 'right',
+            backgroundSize: 'auto',
+            backgroundRepeat: 'no-repeat',
+            position: 'absolute',
+            height: '500px',
+            width: '100%',
+            opacity: 0.1,
+          }}
+        ></div>
+      </ParallaxObject>
+    </>
+  );
+};
+
+const ParallaxObjects = ({ translate }) => {
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        height: '100%',
+        width: '100%',
+      }}
+    >
+      <ParallexImages translate={translate} />
+      <ParallexImages translate={translate} />
     </div>
   );
 };

@@ -6,7 +6,7 @@ const Page1 = ({ id }) => {
     <div className={'Page1'} id={id}>
       <div className={'text'}>
         <h1 className={'name'}>
-          D O M I N I C M A R T I N B. <span>C R U Z</span>
+          <span> D O M I N I C </span>M A R T I N<span> B. </span>C R U Z
         </h1>
         <span>
           __________________________________________________________________________

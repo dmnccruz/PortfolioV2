@@ -7,15 +7,15 @@
   align-items: center;
 }
 
-.background {
+/* .background {
   position: absolute;
   bottom: 0px;
   height: 100%;
   width: 100%;
   background-image: url('/src/assets/images/marbleblackgold.jpg');
   background-position: top;
-  /* background-size: cover; */
-}
+  background-size: cover;
+} */
 
 .contactContainer {
   display: flex;
@@ -23,7 +23,8 @@
   align-items: center;
   width: 800px;
   height: 400px;
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid rgb(30, 30, 30);
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0px 0px 25px 25px rgb(0, 0, 0);
 }

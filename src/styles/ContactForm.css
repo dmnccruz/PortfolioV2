@@ -1,13 +1,14 @@
 .contactForm {
   height: 100%;
   width: 400px;
-  border-right: 1px solid rgb(100, 100, 100);
+  border-right: 1px solid rgb(30, 30, 30);
   padding: 32px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   position: relative;
+  backdrop-filter: blur(5px);
 }
 
 .closeButton {
@@ -64,16 +65,17 @@
   width: 100%;
   border: none;
   outline: none;
-  border-bottom: 1px solid rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(30, 30, 30);
   padding: 15px;
   color: white;
   font-size: 20px;
-  background: black;
+  background: transparent;
   transition: 0.1s ease-in-out;
+  backdrop-filter: blur(5px);
 }
 
 .contactForm input:focus {
-  background: rgb(15, 15, 15);
+  border: 1px solid rgb(30, 30, 30);
 }
 
 .contactForm textarea {
@@ -85,8 +87,9 @@
   color: white;
   resize: none;
   font-size: 20px;
-  background: black;
+  background: transparent;
   transition: 0.1s ease-in-out;
+  backdrop-filter: blur(5px);
 }
 
 .contactForm textarea::-webkit-scrollbar-track {
@@ -110,7 +113,8 @@
 }
 
 .contactForm textarea:focus {
-  background: rgb(15, 15, 15);
+  border-left: 1px solid rgb(30, 30, 30);
+  border-right: 1px solid rgb(30, 30, 30);
 }
 
 .contactForm input.error,
@@ -130,7 +134,7 @@
   height: 40px;
   min-height: 40px;
   width: 100%;
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid rgb(30, 30, 30);
   color: white;
   font-size: 20px;
   background: black;
@@ -170,7 +174,6 @@
   width: 100%;
   color: white;
   font-size: 20px;
-  background: black;
   transition: 0.1s ease-in-out;
 }
 
