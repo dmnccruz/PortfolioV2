@@ -96,19 +96,19 @@ const ContactForm = () => {
               animationKey='plusToX'
               size={32}
               autoplay={true}
-              strokeColor='rgb(82, 209, 78)'
-              fillColor='rgb(82, 209, 78)'
+              strokeColor='rgb(245, 241, 218)'
+              fillColor='rgb(245, 241, 218)'
               style={{ transform: 'rotate(45deg)' }}
             />
           </div>
           <UseAnimations
-            animationKey='radioButton'
-            size={102}
+            animationKey='star'
+            size={72}
             autoplay={true}
-            strokeColor='rgb(82, 209, 78)'
-            fillColor='rgb(82, 209, 78)'
+            strokeColor='rgb(245, 241, 218)'
+            fillColor='rgb(245, 241, 218)'
           />
-          <p>Thank you for reaching out!</p>
+          <p>thank you for reaching out!</p>
         </div>
       ) : null}
       <h1 className={'header'}>say hello.</h1>

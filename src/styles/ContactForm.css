@@ -35,7 +35,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(82, 209, 78, 0.7);
+  background: rgba(196, 171, 30, 0.9);
   z-index: 10;
   backdrop-filter: blur(5px);
   animation: 0.3s successBackground ease-out forwards;
@@ -45,7 +45,7 @@
 .successBackground p {
   margin-top: 20px;
   font-size: 24px;
-  color: rgb(148, 248, 144);
+  color: rgb(245, 241, 218);
 }
 
 .header {
