@@ -5,17 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
-/* .background {
-  position: absolute;
-  bottom: 0px;
-  height: 100%;
-  width: 100%;
-  background-image: url('/src/assets/images/marbleblackgold.jpg');
-  background-position: top;
-  background-size: cover;
-} */
 
 .contactContainer {
   display: flex;
@@ -27,4 +18,63 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 0px 25px 25px rgb(0, 0, 0);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  padding: 0 50px 0 50px;
+}
+
+.date h6,
+.updated h6 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.date p,
+.updated p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+.updated {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+@keyframes successBackground {
+  to {
+    display: flex;
+    right: 50px;
+  }
+}
+
+.backToTop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border: 1px solid red;
+  right: -200px;
+  bottom: 75px;
+  border-radius: 100px;
+  border: 1px solid rgb(30, 30, 30);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  animation: successBackground 0.5s ease-in-out forwards;
+}
+
+.backToTop:hover {
+  background: rgb(209, 183, 32);
+  color: rgb(31, 31, 31);
+  box-shadow: 0px 0px 15px 1px rgba(209, 183, 32, 0.5);
 }

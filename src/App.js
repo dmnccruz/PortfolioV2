@@ -8,13 +8,30 @@ import './styles/App.css';
 
 const App = () => {
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.scrollY);
+  const [atBottom, setAtBottom] = useState(false);
+
+  const handleScroll = () => {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.scrollHeight - 200
+    ) {
+      setAtBottom(true);
+    } else {
+      setAtBottom(false);
+    }
+    setOffsetY(window.scrollY);
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   });
+
+  // useEffect(() => {
+  //   window.onbeforeunload = function () {
+  //     window.scrollTo(0, 0);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -23,7 +40,7 @@ const App = () => {
         <div className='App'>
           <Page1 id={'Page1'} />
           <Page2 id={'Page2'} />
-          <Page3 id={'Page3'} />
+          <Page3 id={'Page3'} atBottom={atBottom} />
         </div>
       </SmoothScroll>
     </>
