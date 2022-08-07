@@ -1,9 +1,9 @@
 import ContactForm from './ContactForm';
 import Map from './Map';
-import '../styles/Page3.css';
 import moment from 'moment-timezone';
 import { useEffect, useState } from 'react';
 import UseAnimations from 'react-useanimations';
+import '../styles/Page3.css';
 
 const Page3 = ({ id, atBottom }) => {
   const [date, setDate] = useState(moment.tz(Date.now(), 'Asia/Taipei'));
@@ -25,14 +25,12 @@ const Page3 = ({ id, atBottom }) => {
       </div>
       <div className={'footer'}>
         <div className={'date'}>
-          <h6>my local time</h6>
-          <p>
-            {date.format('MMM D YYYY - h:mm:ssa')}, Manila, Philippines, GMT+8
-          </p>
+          <h6>Manila, Philippines</h6>
+          <p>{date.format(`MMM D 'YY - h:mm:ssA`)}, GMT+8</p>
         </div>
         <div className={'updated'}>
           <h6>updated</h6>
-          <p>Aug 2022</p>
+          <p>Aug '22</p>
         </div>
       </div>
       <div
