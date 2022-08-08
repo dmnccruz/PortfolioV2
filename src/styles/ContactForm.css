@@ -36,9 +36,9 @@
   height: 100%;
   width: 100%;
   background: rgba(196, 171, 30, 0.9);
-  z-index: 10;
+  z-index: 100;
   backdrop-filter: blur(5px);
-  animation: 0.3s successBackground ease-out forwards;
+  animation: 0.5s successBackground ease-out forwards;
   opacity: 0;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .contactForm input {
-  height: 32px;
+  height: 42px;
   width: 100%;
   border: none;
   outline: none;
@@ -96,6 +96,7 @@
   border-top: none;
   margin-bottom: 10px;
   border-radius: 0 0 10px 10px;
+  padding-top: 7.5px;
 }
 
 .contactForm textarea::-webkit-scrollbar-track {

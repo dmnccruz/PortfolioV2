@@ -39,7 +39,14 @@ const Page2 = ({ id }) => {
               </div>
               <div className={'projectPreview'} id={'projectPreview' + i}>
                 <div className={'projectImage'}></div>
-                <div className={'projectButton'}>visit</div>
+                <div
+                  className={'projectButton'}
+                  onClick={() =>
+                    window.open(e.url, '_blank', 'noopener,noreferrer')
+                  }
+                >
+                  visit
+                </div>
               </div>
             </div>
           );

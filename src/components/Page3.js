@@ -3,10 +3,12 @@ import Map from './Map';
 import moment from 'moment-timezone';
 import { useEffect, useState } from 'react';
 import UseAnimations from 'react-useanimations';
+import HandModel from './HandModel';
 import '../styles/Page3.css';
 
 const Page3 = ({ id, atBottom }) => {
   const [date, setDate] = useState(moment.tz(Date.now(), 'Asia/Taipei'));
+  const [handShake, setHandShake] = useState(false);
 
   useEffect(() => {
     const timeInterval = setInterval(
@@ -19,8 +21,9 @@ const Page3 = ({ id, atBottom }) => {
 
   return (
     <div className={'Page3'} id={id}>
+      <HandModel handShake={handShake} />
       <div className={'contactContainer'}>
-        <ContactForm />
+        <ContactForm handShake={handShake} setHandShake={setHandShake} />
         <Map />
       </div>
       <div className={'footer'}>

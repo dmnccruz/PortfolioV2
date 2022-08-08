@@ -3,9 +3,11 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 350px;
+  z-index: 10;
 }
 
 .contactContainer {
@@ -49,7 +51,7 @@
   flex-direction: column;
 }
 
-@keyframes successBackground {
+@keyframes backToTop {
   to {
     display: flex;
     right: 50px;
@@ -70,7 +72,7 @@
   border: 1px solid rgb(30, 30, 30);
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  animation: successBackground 0.5s ease-in-out forwards;
+  animation: backToTop 0.5s ease-in-out forwards;
 }
 
 .backToTop:hover {

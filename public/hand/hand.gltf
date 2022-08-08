@@ -1,0 +1,185 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1193,
+      "max": [0.3007711172103882, 0.24733741581439972, 0.5304500460624695],
+      "min": [-0.32342374324798584, -0.18860121071338654, -0.5559661388397217],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 14316,
+      "componentType": 5126,
+      "count": 1193,
+      "max": [0.9969227313995361, 0.999164342880249, 0.9925302863121033],
+      "min": [-0.9997239112854004, -0.9997843503952026, -0.9914883375167847],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1193,
+      "max": [0.9967222809791565, 0.9974448084831238, 0.9721590280532837, 1.0],
+      "min": [
+        -0.9997863173484802, -0.9972164034843445, -0.9793350696563721, 1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1193,
+      "max": [0.9888964891433716, 0.9977559447288513],
+      "min": [0.002244106261059642, 0.002244106261059642],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 4500,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Loïc Norgeot (https://sketchfab.com/norgeotloic)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lowpoly-hand-105a475f4df6403e9c67afea99e34b86",
+      "title": "Lowpoly hand"
+    },
+    "generator": "Sketchfab-12.64.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 18000,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9544,
+      "byteOffset": 18000,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28632,
+      "byteOffset": 27544,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 19088,
+      "byteOffset": 56176,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 75264,
+      "uri": "hand.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/tmp.o_material_0_normal.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorfactor": [1.0, 0.766, 0.336, 1.0],
+        "baseColorFactor": [1.0, 0.6121, 0.0278, 1.0],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.1
+      },
+      "name": "gold"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "tmp.o.011_tmp.o_material_0_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [1],
+      "matrix": [
+        0.0, -2.220446049250313e-16, 1.0, 0.0, -0.01230025663971901,
+        -0.99992436170578, -2.2202780984987403e-16, 0.0, 0.99992436170578,
+        -0.01230025663971901, -2.7312056260429006e-18, 0.0, 0.17918924987316132,
+        1.6451809406280522, -1.8042569160461421, 1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [2],
+      "matrix": [
+        1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0,
+        0.0, 1.0
+      ],
+      "name": "a63a182c68274c46a40b7cc4e5029fc5.fbx"
+    },
+    {
+      "children": [3],
+      "name": "RootNode"
+    },
+    {
+      "children": [4],
+      "matrix": [
+        100.0, 0.0, 0.0, 0.0, 0.0, -4.371139006309477e-6, -99.9999999999999,
+        0.0, 0.0, 99.9999999999999, -4.371139006309477e-6, 0.0, 0.0, 0.0, 0.0,
+        1.0
+      ],
+      "name": "tmp.o.011"
+    },
+    {
+      "mesh": 0,
+      "name": "tmp.o.011_tmp.o_material_0_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [0]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

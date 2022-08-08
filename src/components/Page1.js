@@ -18,7 +18,6 @@ const Page1 = ({ id }) => {
           s o f t w a r e <span> • </span> d e v e l o p e r
         </h1>
       </div>
-
       <HeadModel />
     </div>
   );

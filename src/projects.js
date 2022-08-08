@@ -2,25 +2,31 @@ export const projects = [
   {
     name: 'SocialEyes',
     tech: ['React', 'NodeJs'],
-    url: '',
+    url: 'https://socialeyes.vercel.app/login',
     image: '',
   },
   {
     name: 'Produktibo',
     tech: ['React', 'Firebase', 'GraphQL'],
-    url: '',
+    url: 'https://produktibo.herokuapp.com/',
     image: '',
   },
   {
     name: 'ASCIIfy',
     tech: ['React Native', 'Firebase'],
-    url: '',
+    url: 'https://asciify.vercel.app/',
     image: '',
   },
   {
     name: 'Forekastr',
     tech: ['PHP', 'MySQL'],
-    url: '',
+    url: 'https://forekastr.vercel.app/',
+    image: '',
+  },
+  {
+    name: 'Hangry',
+    tech: ['React'],
+    url: 'https://hangry.vercel.app/',
     image: '',
   },
 ];

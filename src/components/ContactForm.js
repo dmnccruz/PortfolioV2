@@ -3,7 +3,7 @@ import axios from 'axios';
 import UseAnimations from 'react-useanimations';
 import '../styles/ContactForm.css';
 
-const ContactForm = () => {
+const ContactForm = ({ handShake, setHandShake, props }) => {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({
     submitted: false,
@@ -55,6 +55,7 @@ const ContactForm = () => {
 
     setErrors(errorsObj);
     if (Object.values(errorsObj).length === 0) {
+      setHandShake(true);
       setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
       axios({
         method: 'POST',
@@ -62,12 +63,14 @@ const ContactForm = () => {
         data: inputs,
       })
         .then((response) => {
+          setHandShake(false);
           handleServerResponse(
             true,
             'Thank you, your message has been submitted.'
           );
         })
         .catch((error) => {
+          setHandShake(false);
           handleServerResponse(false, error.response.data.error);
         });
     }
@@ -117,12 +120,16 @@ const ContactForm = () => {
         placeholder={'email'}
         value={inputs.email}
         onChange={(e) => handleChange('email', e.target.value)}
+        onFocus={() => setHandShake(true)}
+        onBlur={() => setHandShake(false)}
       />
       <textarea
         className={`${errors.message ? 'error' : ''}`}
         placeholder={'message'}
         value={inputs.message}
         onChange={(e) => handleChange('message', e.target.value)}
+        onFocus={() => setHandShake(true)}
+        onBlur={() => setHandShake(false)}
       />
       <div className={'button'} onClick={(e) => handleSubmit(e)}>
         {status.submitting ? (
