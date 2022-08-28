@@ -38,7 +38,15 @@ const Page2 = ({ id }) => {
                 </div>
               </div>
               <div className={'projectPreview'} id={'projectPreview' + i}>
-                <div className={'projectImage'}></div>
+                <div
+                  className={'projectImage'}
+                  style={{
+                    backgroundImage: e.image,
+                    backgroundPosition: 'right',
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+                ></div>
                 <div
                   className={'projectButton'}
                   onClick={() =>
@@ -52,7 +60,7 @@ const Page2 = ({ id }) => {
           );
         })}
       </div>
-      <div className={'projectsButton'}>more</div>
+      {/* <div className={'projectsButton'}>more</div> */}
     </div>
   );
 };

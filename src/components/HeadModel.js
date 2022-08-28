@@ -27,7 +27,10 @@ function Model(props) {
   return (
     <group ref={group} {...props}>
       <mesh castShadow receiveShadow scale={[1, 1, 1]} dispose={null}>
-        <primitive object={gltf.scene} scale={2} />
+        <primitive
+          object={gltf.scene}
+          scale={props.windowSize < 800 ? 1.5 : 2}
+        />
       </mesh>
       <Lights />
     </group>
@@ -88,7 +91,7 @@ function Zoom() {
   });
 }
 
-const HeadModel = () => {
+const HeadModel = ({ windowSize }) => {
   return (
     <div
       className='HeadModel'
@@ -119,7 +122,11 @@ const HeadModel = () => {
             </Html>
           }
         >
-          <Model position={[0, -2, 0]} rotation={[0, -0.2, 0]} />
+          <Model
+            position={[0, -2, 0]}
+            rotation={[0, -0.2, 0]}
+            windowSize={windowSize}
+          />
           <Zoom />
         </Suspense>
       </Canvas>

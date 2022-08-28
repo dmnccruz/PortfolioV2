@@ -56,3 +56,29 @@ span {
   color: rgb(187, 159, 0);
   font-size: 20px;
 }
+
+/* PHONE */
+@media only screen and (max-width: 900px) {
+  .name h1,
+  h2 {
+    font-size: 30px;
+    line-height: 20px;
+  }
+
+  .name h1 {
+    font-size: 30px;
+    line-height: 10px;
+  }
+
+  span {
+    font-size: 6px;
+  }
+
+  .subtext {
+    font-size: 15px;
+  }
+
+  .subtext span {
+    font-size: 15px;
+  }
+}

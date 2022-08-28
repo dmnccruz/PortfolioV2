@@ -6,7 +6,7 @@ import UseAnimations from 'react-useanimations';
 import HandModel from './HandModel';
 import '../styles/Page3.css';
 
-const Page3 = ({ id, atBottom }) => {
+const Page3 = ({ id, atBottom, windowSize }) => {
   const [date, setDate] = useState(moment.tz(Date.now(), 'Asia/Taipei'));
   const [handShake, setHandShake] = useState(false);
 
@@ -21,7 +21,7 @@ const Page3 = ({ id, atBottom }) => {
 
   return (
     <div className={'Page3'} id={id}>
-      <HandModel handShake={handShake} />
+      <HandModel handShake={handShake} windowSize={windowSize} />
       <div className={'contactContainer'}>
         <ContactForm handShake={handShake} setHandShake={setHandShake} />
         <Map />

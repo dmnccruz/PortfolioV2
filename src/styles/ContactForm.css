@@ -187,3 +187,12 @@
 .socialIcon {
   cursor: pointer;
 }
+
+/* PHONE */
+@media only screen and (max-width: 900px) {
+  .contactForm {
+    height: 350px;
+    width: 400px;
+    border-bottom: 1px solid rgb(92, 81, 18);
+  }
+}

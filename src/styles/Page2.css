@@ -141,3 +141,39 @@
   color: rgb(31, 31, 31);
   box-shadow: 0px 0px 15px 1px rgba(209, 183, 32, 0.5);
 }
+
+/* PHONE */
+@media only screen and (max-width: 900px) {
+  .project {
+    height: 150px;
+    width: 100%;
+  }
+
+  .projectPreview {
+    padding: 0px 50px 0 50px;
+  }
+
+  .projectImage {
+    height: 125px;
+    width: 200px;
+  }
+
+  .projectTitle {
+    padding: 0px 50px 0 50px;
+  }
+
+  .project h1 {
+    color: rgb(209, 183, 32);
+    font-size: 35px;
+  }
+
+  .projectButton {
+    font-size: 15px;
+    padding: 10px 25px 10px 25px;
+  }
+
+  .techChip {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

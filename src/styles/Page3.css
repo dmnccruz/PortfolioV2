@@ -80,3 +80,38 @@
   color: rgb(31, 31, 31);
   box-shadow: 0px 0px 15px 1px rgba(209, 183, 32, 0.5);
 }
+
+/* PHONE */
+@media only screen and (max-width: 900px) {
+  .Page3 {
+    padding-bottom: 150px;
+  }
+
+  .contactContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 700px;
+    border-radius: 20px;
+  }
+
+  @keyframes backToTop {
+    to {
+      display: flex;
+      right: 150px;
+    }
+  }
+
+  .backToTop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    bottom: 25px;
+    animation: backToTop 0.5s ease-in-out forwards;
+  }
+}

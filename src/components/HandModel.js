@@ -23,12 +23,12 @@ function Model(props) {
   useFrame(() => {
     leftHand.current.position.x = THREE.MathUtils.lerp(
       leftHand.current.position.x,
-      props.handShake ? -1.5 : -4.5,
+      props.handShake ? -1.5 : props.windowSize < 800 ? -3.2 : -4.5,
       0.05
     );
     rightHand.current.position.x = THREE.MathUtils.lerp(
       rightHand.current.position.x,
-      props.handShake ? 1 : 4,
+      props.handShake ? 1 : props.windowSize < 800 ? 2.2 : 4,
       0.05
     );
   });
@@ -41,10 +41,13 @@ function Model(props) {
         receiveShadow
         scale={[1, 1, 1]}
         dispose={null}
-        position={[-4.5, 3, 0]}
+        position={[-4.5, props.windowSize < 800 ? 5 : 3, 0]}
         rotation={[1, 0, 0]}
       >
-        <primitive object={gltf.scene} scale={0.075} />
+        <primitive
+          object={gltf.scene}
+          scale={props.windowSize < 800 ? 0.05 : 0.075}
+        />
       </mesh>
       <mesh
         ref={rightHand}
@@ -52,10 +55,13 @@ function Model(props) {
         receiveShadow
         scale={[1, 1, 1]}
         dispose={null}
-        position={[4, 3.2, -1]}
+        position={[4, props.windowSize < 800 ? 5.2 : 3.2, -1]}
         rotation={[2, 0, 3]}
       >
-        <primitive object={gltf2.scene} scale={0.075} />
+        <primitive
+          object={gltf2.scene}
+          scale={props.windowSize < 800 ? 0.05 : 0.075}
+        />
       </mesh>
       <Lights />
     </group>
@@ -116,7 +122,7 @@ function Zoom() {
   });
 }
 
-const HandModel = ({ handShake }) => {
+const HandModel = ({ handShake, windowSize }) => {
   return (
     <div className='HandModel'>
       <Canvas
@@ -144,6 +150,7 @@ const HandModel = ({ handShake }) => {
             position={[0, -2, 0]}
             rotation={[0, -0.2, 0]}
             handShake={handShake}
+            windowSize={windowSize}
           />
           <Zoom />
         </Suspense>

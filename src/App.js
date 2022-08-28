@@ -11,6 +11,7 @@ const App = () => {
   const [offsetY, setOffsetY] = useState(0);
   const [atBottom, setAtBottom] = useState(false);
   const [atTop, setAtTop] = useState(false);
+  const [windowSize, setWindowSize] = useState(null);
 
   const handleScroll = () => {
     if (window.scrollY === 0) {
@@ -29,9 +30,17 @@ const App = () => {
     setOffsetY(window.scrollY);
   };
 
+  const handleResize = (e) => {
+    setWindowSize(e.currentTarget.innerWidth);
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   });
 
   // useEffect(() => {
@@ -46,9 +55,9 @@ const App = () => {
       <SmoothScroll>
         <div className='App'>
           {atTop ? <ScrollIndicator /> : null}
-          <Page1 id={'Page1'} />
+          <Page1 id={'Page1'} windowSize={windowSize} />
           <Page2 id={'Page2'} />
-          <Page3 id={'Page3'} atBottom={atBottom} />
+          <Page3 id={'Page3'} atBottom={atBottom} windowSize={windowSize} />
         </div>
       </SmoothScroll>
     </>
