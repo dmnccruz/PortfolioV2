@@ -11,7 +11,7 @@ const App = () => {
   const [offsetY, setOffsetY] = useState(0);
   const [atBottom, setAtBottom] = useState(false);
   const [atTop, setAtTop] = useState(false);
-  const [windowSize, setWindowSize] = useState(null);
+  const [windowSize, setWindowSize] = useState(2560);
 
   const handleScroll = () => {
     if (window.scrollY === 0) {
