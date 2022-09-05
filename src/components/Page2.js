@@ -1,5 +1,17 @@
 import { projects } from '../projects';
 import '../styles/Page2.css';
+import { isMobile } from 'react-device-detect';
+
+const getVisitButton = (project) => {
+  return (
+    <div
+      className={'projectButton'}
+      onClick={() => window.open(project.url, '_blank', 'noopener,noreferrer')}
+    >
+      visit
+    </div>
+  );
+};
 
 const Page2 = ({ id }) => {
   return (
@@ -15,27 +27,36 @@ const Page2 = ({ id }) => {
                 `,
               }}
               onMouseOver={() => {
-                document.getElementById('projectTitle' + i).style.left =
-                  '-100%';
-                document.getElementById('projectPreview' + i).style.left = '0%';
+                if (!isMobile) {
+                  document.getElementById('projectTitle' + i).style.left =
+                    '-100%';
+                  document.getElementById('projectPreview' + i).style.left =
+                    '0%';
+                }
               }}
               onMouseOut={() => {
-                document.getElementById('projectTitle' + i).style.left = '0';
-                document.getElementById('projectPreview' + i).style.left =
-                  '100%';
+                if (!isMobile) {
+                  document.getElementById('projectTitle' + i).style.left = '0';
+                  document.getElementById('projectPreview' + i).style.left =
+                    '100%';
+                }
               }}
             >
               <div className={'projectTitle'} id={'projectTitle' + i}>
                 <h1>{e.name}</h1>
-                <div className={'techChipContainer'}>
-                  {e.tech.map((el, idx) => {
-                    return (
-                      <div key={idx} className={'techChip'}>
-                        <p>{el}</p>
-                      </div>
-                    );
-                  })}
-                </div>
+                {isMobile ? (
+                  getVisitButton(e)
+                ) : (
+                  <div className={'techChipContainer'}>
+                    {e.tech.map((el, idx) => {
+                      return (
+                        <div key={idx} className={'techChip'}>
+                          <p>{el}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
               <div className={'projectPreview'} id={'projectPreview' + i}>
                 <div
@@ -47,14 +68,7 @@ const Page2 = ({ id }) => {
                     backgroundRepeat: 'no-repeat',
                   }}
                 ></div>
-                <div
-                  className={'projectButton'}
-                  onClick={() =>
-                    window.open(e.url, '_blank', 'noopener,noreferrer')
-                  }
-                >
-                  visit
-                </div>
+                {getVisitButton(e)}
               </div>
             </div>
           );

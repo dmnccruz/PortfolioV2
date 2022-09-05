@@ -15,6 +15,7 @@
   pointer-events: none;
   opacity: 0;
   animation: scrollIndicatorContainer 3s forwards 1.5s;
+  padding-top: 15px;
 }
 
 @keyframes scrollIndicator {
@@ -55,4 +56,11 @@
   background: rgb(209, 183, 32);
   box-shadow: 0px 0px 15px 1px rgba(209, 183, 32, 0.5);
   content: ' ';
+}
+
+/* PHONE */
+@media only screen and (max-width: 900px) {
+  .scrollIndicatorContainer {
+    height: 75px;
+  }
 }

@@ -34,7 +34,12 @@ function Model(props) {
   });
 
   return (
-    <group ref={group} {...props} position={[0.5, -2, 0]} rotation={[0, 0, 0]}>
+    <group
+      ref={group}
+      {...props}
+      position={[0.5, -2, props.windowSize < 800 ? 5 : 5]}
+      rotation={[0, 0, 0]}
+    >
       <mesh
         ref={leftHand}
         castShadow

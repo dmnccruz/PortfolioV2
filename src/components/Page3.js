@@ -24,7 +24,7 @@ const Page3 = ({ id, atBottom, windowSize }) => {
       <HandModel handShake={handShake} windowSize={windowSize} />
       <div className={'contactContainer'}>
         <ContactForm handShake={handShake} setHandShake={setHandShake} />
-        <Map />
+        <Map windowSize={windowSize} />
       </div>
       <div className={'footer'}>
         <div className={'date'}>

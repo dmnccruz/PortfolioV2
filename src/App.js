@@ -11,7 +11,7 @@ const App = () => {
   const [offsetY, setOffsetY] = useState(0);
   const [atBottom, setAtBottom] = useState(false);
   const [atTop, setAtTop] = useState(false);
-  const [windowSize, setWindowSize] = useState(2560);
+  const [windowSize, setWindowSize] = useState(null);
 
   const handleScroll = () => {
     if (window.scrollY === 0) {
@@ -42,6 +42,12 @@ const App = () => {
       window.removeEventListener('resize', handleResize);
     };
   });
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      setWindowSize(window.innerWidth);
+    }
+  }, []);
 
   // useEffect(() => {
   //   window.onbeforeunload = function () {

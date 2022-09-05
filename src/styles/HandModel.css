@@ -1,7 +1,13 @@
 .HandModel {
-  height: 100%;
+  height: 500px;
   width: 100%;
-  position: absolute;
   z-index: -20;
-  top: -25%;
+}
+
+/* PHONE */
+@media only screen and (max-width: 900px) {
+  .HandModel {
+    height: 200px;
+    height: 300px;
+  }
 }
