@@ -6,6 +6,7 @@ import Page3 from './components/Page3';
 import SmoothScroll from './components/SmoothScroll/SmoothScroll';
 import ParallaxObjects from './components/ParallaxObjects';
 import './styles/App.css';
+import { isMobile } from 'react-device-detect';
 
 const App = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -27,7 +28,9 @@ const App = () => {
     } else {
       setAtBottom(false);
     }
-    setOffsetY(window.scrollY);
+    if (!isMobile) {
+      setOffsetY(window.scrollY);
+    }
   };
 
   const handleResize = (e) => {
